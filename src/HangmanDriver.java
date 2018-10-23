@@ -10,7 +10,7 @@ public class HangmanDriver {
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		String cd = System.getProperty("user.dir");
-		File keyboard = new File(cd + "/src/keyboard.txt");
+		File keyboard = new File(cd + "/src/ascii/keyboard.txt");
 		String myText = "", myHangman = "";
 		Scanner in = new Scanner(keyboard);
 		while(in.hasNextLine())
@@ -21,7 +21,7 @@ public class HangmanDriver {
 		int index = 0;
 		String path;
 		while(index < mistakes_MAX + 1) {
-			path = cd + "/src/hangman" + index + ".txt";
+			path = cd + "/src/ascii/hangman" + index + ".txt";
 			File hangman = new File(path);
 			in = new Scanner(hangman);
 			while(in.hasNextLine())
@@ -33,7 +33,7 @@ public class HangmanDriver {
 		}
 		
 		
-		File title = new File(cd + "/src/title.txt");
+		File title = new File(cd + "/src/ascii/title.txt");
 		String myWord = "";
 		boolean stillPlaying = true;
 		
